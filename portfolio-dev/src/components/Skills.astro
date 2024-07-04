@@ -1,0 +1,70 @@
+---
+import Java from '../icons/Java.astro';
+import JavaScript from '../icons/JavaScript.astro';
+import HTML from '../icons/HTML.astro';
+import CSS from '../icons/CSS.astro';
+import Bootstrap from '../icons/Bootstrap.astro';
+import Angular from '../icons/Angular.astro';
+import SpringBoot from '../icons/SpringBoot.astro';
+import DotNet from '../icons/DotNet.astro';
+import SQL from '../icons/SQL.astro';
+import Python from '../icons/Python.astro';
+import Git from '../icons/Git.astro';
+
+const skills = [
+  { name: 'Java', icon: Java },
+  { name: 'JavaScript', icon: JavaScript },
+  { name: 'HTML', icon: HTML },
+  { name: 'CSS', icon: CSS },
+  { name: 'Bootstrap', icon: Bootstrap },
+  { name: 'Angular', icon: Angular },
+  { name: 'Spring', icon: SpringBoot },
+  { name: '.NET', icon: DotNet },
+  { name: 'MySQL', icon: SQL },
+  { name: 'Python', icon: Python },
+  { name: 'Git', icon: Git },
+];
+---
+
+<style>
+  .skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .skill-icon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .skill-icon svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .skill-name {
+    margin-top: 10px;
+    text-align: center;
+    color: white;
+  }
+</style>
+
+<section class="skills">
+  {skills.map(skill => (
+    <div>
+      <div class="skill-icon">
+        <skill.icon />
+      </div>
+      <p class="skill-name">{skill.name}</p>
+    </div>
+  ))}
+</section>

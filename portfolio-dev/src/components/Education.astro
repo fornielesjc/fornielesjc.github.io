@@ -1,0 +1,28 @@
+---
+import EducationItem from '../components/EducationItem.astro';
+const EDUCATION=[
+{
+        date:'Septiembre 2022 - Junio 2024',
+        centro:'IES Julio Verne',
+        title:'Ciclo Superior de Desarrollo de Aplicaciones Web'
+    },
+    {
+        date:'Septiembre 2019 - Junio 2021',
+        centro:'IES Miguel de Mañara',
+        title:'Bachillerato Tecnológico'
+    },
+    
+]
+---
+<ol class="relative border-s border-gray-200 ml-3">     
+    
+    {
+        EDUCATION.map(education=>(
+            <li class="mb-10 ms-4">
+                <EducationItem {... education}></EducationItem>
+            </li>
+        ))
+    }
+    
+    
+</ol>

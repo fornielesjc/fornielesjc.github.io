@@ -1,0 +1,92 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Badge from "../components/Badge.astro";
+import Linkedin from '../icons/LinkedIn.astro';
+import SocialPill from '../components/SocialPill.astro'
+import GitHub from '../icons/GitHub.astro';
+import Mail from '../icons/Mail.astro';
+import Experience from '../components/Experience.astro'
+import Container from '../components/Container.astro'
+import Briefcase from '../icons/Briefcase.astro';
+import Education from '../components/Education.astro';
+import Formacion from '../icons/Formacion.astro';
+import Skills from '../components/Skills.astro';
+import SobreMi from '../components/SobreMi.astro';;
+import Map from '../icons/Map.astro';
+import CV from '../icons/CV.astro';
+import Code from '../icons/Code.astro';
+import User from '../icons/User.astro';
+---
+
+<Layout title="Juan Carlos Fornieles - Desarrollador Web"
+description="Portfolio de Juan Carlos Fornieles, desarrollador web recien titulado como Técnico Superior en Desarrollo de Aplicaciones Web">
+	<main class="px-4">
+		<Container class="py-16 md:py-36 items-center text-center">
+			<div class="py-16 max-w-xl items-center text-center">
+			<div class=" gap-4 mb-4 items-center text-center">
+				<a href="https://www.linkedin.com/in/jcfornieles/" target="_blank" rel="noopener" class="flex justify-center items-center"><Badge>Disponible para trabajar</Badge></a>
+			</div>
+			
+			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold 
+			gap-x-4 pb-6 lg:pb-10 tracking-tight">
+				Juan Carlos Fornieles 
+			</h1>
+			<h2 class="text-xl lg:text-2xl text-center  text-wrap max-w-[700px]">
+				<span class="opacity-80">Desarrollador Web</span> <br>
+				<span>Sevilla, España</span>
+			</h2>
+
+			<nav class="flex flex-col items-center gap-4 mt-8">
+				<div class="flex gap-4 flex-wrap justify-center">
+					<SocialPill href="https://www.linkedin.com/in/jcfornieles/">
+						<Linkedin class="size-4 md:size-6"></Linkedin>
+							LinkedIn
+					</SocialPill>
+
+					<SocialPill href="https://github.com/fornielesjc">
+						<GitHub class="size-4 md:size-6"></GitHub>
+							GitHub
+					</SocialPill>
+
+					<SocialPill href="mailto:fornielesjc@gmail.com">
+						<Mail class="size-4 md:size-6"></Mail>
+							fornielesjc@gmail.com
+					</SocialPill>
+				</div>
+					<SocialPill href="../../public/Curriculum_juancarlos.pdf">
+						<CV class="size-4 md:size-6"></CV>
+							Descarga mi CV
+					</SocialPill>
+
+
+
+					
+			</nav>
+
+
+
+		</div>
+		</Container>
+		<Container id="experiencia">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center"><Briefcase class="size-7"></Briefcase>Experiencia laboral</h2>
+			<Experience></Experience>
+		</Container>
+
+		<Container id="educacion">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center"><Formacion class="size-7"></Formacion>Formación</h2>
+			<Education></Education>
+		</Container>
+
+		<Container id="skills">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center"><Code class="size-7"></Code>Habilidades Técnicas</h2>
+			<Skills/>
+		</Container>
+
+		<Container id="sobremi">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center"><User class="size-7"></User>Sobre mí</h2>
+			<SobreMi/>
+		</Container>
+
+	</main>
+</Layout>

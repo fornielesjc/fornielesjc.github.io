@@ -1,0 +1,31 @@
+---
+import ExperienceItem from '../components/ExperienceItem.astro';
+const EXPERIENCE=[
+{
+        date:'Abril 2024 - Junio 2024',
+        centro:'Atrebo S.L',
+        title:'Becario de desarrollo web',
+        description:'Prácticas de desarrollo web con el framework .NET y Angular.'
+    },
+    {
+        date:'Marzo 2022 - Junio 2022',
+        centro:'Sofitec Aero S.L',
+        title:'Prácticas Montaje aeronautico',
+        description:'Prácticas de montaje de equipos de aeronaves, logística y chapistería.'
+    },
+    
+]
+---
+<ol class="relative border-s border-gray-200 ml-3">     
+    
+    {
+        EXPERIENCE.map(experience=>(
+            <li class="mb-10 ms-4">
+                <ExperienceItem {... experience}></ExperienceItem>
+            </li>
+        ))
+    }
+    
+    
+</ol>
+
